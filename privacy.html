@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Bot de Postagem Automática</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 50px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid rgba(102, 126, 234, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb, #4facfe, #00f2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientText 3s ease infinite;
+            background-size: 200% 200%;
+        }
+
+        @keyframes gradientText {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .last-updated {
+            color: #999;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        .content {
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .content h2 {
+            color: #667eea;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .content h3 {
+            color: #764ba2;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .content ul, .content ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .content li {
+            margin-bottom: 10px;
+        }
+
+        .content strong {
+            color: #667eea;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+            margin: 25px 0;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .footer-links {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(102, 126, 234, 0.2);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .footer-link {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.95em;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .footer-link:hover {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .footer-link-icon {
+            font-size: 1.1em;
+        }
+
+        .official-website {
+            font-weight: bold;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.15), rgba(118, 75, 162, 0.15));
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .container {
+                padding: 30px 20px;
+            }
+
+            .content h2 {
+                font-size: 1.5em;
+            }
+
+            .content h3 {
+                font-size: 1.2em;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .footer-link {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔒 Privacy Policy</h1>
+            <p class="subtitle">Política de Privacidade</p>
+            <p class="last-updated">Última atualização: Janeiro 2024</p>
+        </div>
+
+        <div class="content">
+            <div class="highlight-box">
+                <p><strong>Respeitamos sua privacidade.</strong> Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos suas informações pessoais quando você usa o Bot de Postagem Automática.</p>
+            </div>
+
+            <h2>1. Informações que Coletamos</h2>
+            <p>
+                Coletamos diferentes tipos de informações para fornecer e melhorar nosso serviço:
+            </p>
+
+            <h3>1.1 Informações Fornecidas por Você</h3>
+            <ul>
+                <li><strong>Dados da Conta:</strong> Nome, endereço de e-mail, nome de usuário e senha</li>
+                <li><strong>Credenciais das Plataformas:</strong> Tokens de acesso para TikTok, YouTube e Instagram (armazenados de forma criptografada)</li>
+                <li><strong>Conteúdo:</strong> Vídeos, imagens, textos e outros materiais que você deseja publicar</li>
+                <li><strong>Informações de Perfil:</strong> Preferências de agendamento e configurações do serviço</li>
+            </ul>
+
+            <h3>1.2 Informações Coletadas Automaticamente</h3>
+            <ul>
+                <li><strong>Dados de Uso:</strong> Como você interage com nosso serviço, incluindo páginas visitadas e recursos utilizados</li>
+                <li><strong>Dados Técnicos:</strong> Endereço IP, tipo de navegador, sistema operacional e informações do dispositivo</li>
+                <li><strong>Cookies e Tecnologias Similares:</strong> Para melhorar sua experiência e analisar o uso do serviço</li>
+            </ul>
+
+            <h2>2. Como Usamos Suas Informações</h2>
+            <p>Usamos as informações coletadas para:</p>
+            <ul>
+                <li>Fornecer, manter e melhorar nosso serviço</li>
+                <li>Processar e agendar suas postagens nas plataformas conectadas</li>
+                <li>Enviar notificações sobre o status de suas postagens</li>
+                <li>Responder a suas solicitações e fornecer suporte ao cliente</li>
+                <li>Detectar e prevenir fraudes, abusos e atividades ilegais</li>
+                <li>Cumprir obrigações legais e fazer cumprir nossos termos de serviço</li>
+                <li>Enviar comunicações de marketing (com seu consentimento)</li>
+            </ul>
+
+            <h2>3. Compartilhamento de Informações</h2>
+            <p>
+                Não vendemos suas informações pessoais. Podemos compartilhar suas informações apenas nas seguintes circunstâncias:
+            </p>
+            <ul>
+                <li><strong>Prestadores de Serviços:</strong> Com terceiros que nos ajudam a operar nosso serviço (hospedagem, análise, etc.)</li>
+                <li><strong>Plataformas de Redes Sociais:</strong> Para publicar seu conteúdo conforme solicitado</li>
+                <li><strong>Requisitos Legais:</strong> Quando exigido por lei ou para proteger nossos direitos</li>
+                <li><strong>Com seu Consentimento:</strong> Em outras situações com sua autorização explícita</li>
+            </ul>
+
+            <h2>4. Segurança dos Dados</h2>
+            <p>
+                Implementamos medidas de segurança técnicas e organizacionais apropriadas para proteger suas informações pessoais contra acesso não autorizado, alteração, divulgação ou destruição. Isso inclui:
+            </p>
+            <ul>
+                <li>Criptografia de dados em trânsito e em repouso</li>
+                <li>Controles de acesso rigorosos</li>
+                <li>Monitoramento regular de segurança</li>
+                <li>Backups regulares dos dados</li>
+            </ul>
+            <p>
+                No entanto, nenhum método de transmissão pela Internet ou armazenamento eletrônico é 100% seguro.
+            </p>
+
+            <h2>5. Seus Direitos</h2>
+            <p>Você tem os seguintes direitos em relação às suas informações pessoais:</p>
+            <ul>
+                <li><strong>Acesso:</strong> Solicitar uma cópia das informações pessoais que mantemos sobre você</li>
+                <li><strong>Retificação:</strong> Corrigir informações imprecisas ou incompletas</li>
+                <li><strong>Exclusão:</strong> Solicitar a exclusão de suas informações pessoais</li>
+                <li><strong>Portabilidade:</strong> Receber suas informações em formato estruturado e legível por máquina</li>
+                <li><strong>Oposição:</strong> Opor-se ao processamento de suas informações pessoais</li>
+                <li><strong>Retirada de Consentimento:</strong> Retirar seu consentimento a qualquer momento</li>
+            </ul>
+            <p>Para exercer esses direitos, entre em contato conosco através dos canais indicados nesta política.</p>
+
+            <h2>6. Cookies e Tecnologias de Rastreamento</h2>
+            <p>
+                Usamos cookies e tecnologias similares para coletar informações sobre como você usa nosso serviço. Você pode controlar o uso de cookies através das configurações do seu navegador, mas isso pode afetar a funcionalidade do serviço.
+            </p>
+
+            <h2>7. Retenção de Dados</h2>
+            <p>
+                Retemos suas informações pessoais apenas pelo tempo necessário para cumprir os propósitos descritos nesta política, a menos que um período de retenção mais longo seja exigido ou permitido por lei.
+            </p>
+
+            <h2>8. Privacidade de Menores</h2>
+            <p>
+                Nosso serviço não é direcionado a menores de 18 anos. Não coletamos intencionalmente informações pessoais de menores. Se descobrirmos que coletamos informações de um menor, tomaremos medidas para excluir essas informações.
+            </p>
+
+            <h2>9. Transferências Internacionais</h2>
+            <p>
+                Suas informações podem ser transferidas e mantidas em servidores localizados fora do seu país de residência. Ao usar nosso serviço, você consente com essa transferência.
+            </p>
+
+            <h2>10. Alterações nesta Política</h2>
+            <p>
+                Podemos atualizar esta Política de Privacidade periodicamente. Notificaremos você sobre mudanças significativas publicando a nova política nesta página e atualizando a data de "Última atualização".
+            </p>
+
+            <h2>11. LGPD (Lei Geral de Proteção de Dados)</h2>
+            <p>
+                Esta política está em conformidade com a Lei Geral de Proteção de Dados (LGPD) do Brasil. Se você tiver preocupações sobre como tratamos seus dados pessoais, você também pode entrar em contato com a Autoridade Nacional de Proteção de Dados (ANPD).
+            </p>
+
+            <h2>12. Contato</h2>
+            <p>
+                Se você tiver dúvidas, preocupações ou solicitações relacionadas a esta Política de Privacidade ou ao tratamento de suas informações pessoais, entre em contato conosco:
+            </p>
+            <ul>
+                <li>Através do nosso site oficial</li>
+                <li>Por e-mail: privacidade@seusite.com</li>
+            </ul>
+
+            <a href="index.html" class="back-button">← Voltar para a Página Inicial</a>
+        </div>
+
+        <div class="footer-links">
+            <a href="terms.html" class="footer-link" target="_blank" rel="noopener noreferrer">
+                <span class="footer-link-icon">📜</span>
+                <span>Terms of Service</span>
+            </a>
+            <a href="privacy.html" class="footer-link">
+                <span class="footer-link-icon">🔒</span>
+                <span>Privacy Policy</span>
+            </a>
+            <a href="index.html" class="footer-link official-website">
+                <span class="footer-link-icon">🌐</span>
+                <span>Site Oficial</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Bot de Postagem Automática</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 50px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid rgba(102, 126, 234, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb, #4facfe, #00f2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientText 3s ease infinite;
+            background-size: 200% 200%;
+        }
+
+        @keyframes gradientText {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .last-updated {
+            color: #999;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        .content {
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .content h2 {
+            color: #667eea;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .content h3 {
+            color: #764ba2;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .content ul, .content ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .content li {
+            margin-bottom: 10px;
+        }
+
+        .content strong {
+            color: #667eea;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .footer-links {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(102, 126, 234, 0.2);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .footer-link {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.95em;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .footer-link:hover {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .footer-link-icon {
+            font-size: 1.1em;
+        }
+
+        .official-website {
+            font-weight: bold;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.15), rgba(118, 75, 162, 0.15));
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .container {
+                padding: 30px 20px;
+            }
+
+            .content h2 {
+                font-size: 1.5em;
+            }
+
+            .content h3 {
+                font-size: 1.2em;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .footer-link {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📜 Terms of Service</h1>
+            <p class="subtitle">Termos de Serviço</p>
+            <p class="last-updated">Última atualização: Janeiro 2024</p>
+        </div>
+
+        <div class="content">
+            <h2>1. Aceitação dos Termos</h2>
+            <p>
+                Ao acessar e usar o Bot de Postagem Automática, você concorda em cumprir e estar vinculado aos seguintes termos e condições de uso. Se você não concorda com alguma parte destes termos, não deve usar nosso serviço.
+            </p>
+
+            <h2>2. Descrição do Serviço</h2>
+            <p>
+                O Bot de Postagem Automática é uma ferramenta que permite aos usuários agendar e publicar conteúdo automaticamente nas plataformas TikTok, YouTube e Instagram. O serviço facilita o gerenciamento de postagens em múltiplas redes sociais.
+            </p>
+
+            <h2>3. Elegibilidade</h2>
+            <p>
+                Para usar nosso serviço, você deve:
+            </p>
+            <ul>
+                <li>Ter pelo menos 18 anos de idade ou ter o consentimento de um responsável legal</li>
+                <li>Ter capacidade legal para celebrar contratos vinculativos</li>
+                <li>Fornecer informações precisas e completas ao criar sua conta</li>
+                <li>Manter a segurança de suas credenciais de acesso</li>
+            </ul>
+
+            <h2>4. Uso Aceitável</h2>
+            <p>
+                Você concorda em usar nosso serviço apenas para fins legais e de acordo com estes Termos. Você não deve:
+            </p>
+            <ul>
+                <li>Violar qualquer lei ou regulamento aplicável</li>
+                <li>Infringir direitos de propriedade intelectual de terceiros</li>
+                <li>Publicar conteúdo difamatório, ofensivo, obsceno ou ilegal</li>
+                <li>Usar o serviço para spam ou atividades fraudulentas</li>
+                <li>Tentar acessar áreas não autorizadas do serviço</li>
+                <li>Interferir ou interromper o funcionamento do serviço</li>
+            </ul>
+
+            <h2>5. Contas de Usuário</h2>
+            <p>
+                Você é responsável por manter a confidencialidade de suas credenciais de conta e por todas as atividades que ocorrem sob sua conta. Você deve notificar-nos imediatamente sobre qualquer uso não autorizado de sua conta.
+            </p>
+
+            <h2>6. Conteúdo do Usuário</h2>
+            <p>
+                Você mantém todos os direitos sobre o conteúdo que publica através do nosso serviço. Ao usar nosso serviço, você nos concede uma licença limitada para processar, armazenar e transmitir seu conteúdo conforme necessário para fornecer o serviço.
+            </p>
+            <p>
+                Você garante que possui todos os direitos necessários sobre o conteúdo que publica e que o conteúdo não viola direitos de terceiros.
+            </p>
+
+            <h2>7. Propriedade Intelectual</h2>
+            <p>
+                Todo o conteúdo do serviço, incluindo mas não limitado a texto, gráficos, logos, ícones, imagens e software, é propriedade nossa ou de nossos licenciadores e está protegido por leis de direitos autorais e outras leis de propriedade intelectual.
+            </p>
+
+            <h2>8. Limitação de Responsabilidade</h2>
+            <p>
+                O serviço é fornecido "como está" e "conforme disponível". Não garantimos que o serviço será ininterrupto, livre de erros ou atenderá às suas necessidades específicas. Em nenhuma circunstância seremos responsáveis por danos indiretos, incidentais ou consequenciais.
+            </p>
+
+            <h2>9. Modificações do Serviço</h2>
+            <p>
+                Reservamo-nos o direito de modificar, suspender ou descontinuar qualquer aspecto do serviço a qualquer momento, com ou sem aviso prévio. Não seremos responsáveis perante você ou terceiros por qualquer modificação, suspensão ou descontinuação do serviço.
+            </p>
+
+            <h2>10. Rescisão</h2>
+            <p>
+                Podemos encerrar ou suspender sua conta e acesso ao serviço imediatamente, sem aviso prévio, por qualquer motivo, incluindo se você violar estes Termos de Serviço.
+            </p>
+
+            <h2>11. Alterações nos Termos</h2>
+            <p>
+                Podemos revisar estes Termos de Serviço periodicamente. As alterações entrarão em vigor quando publicadas nesta página. É sua responsabilidade revisar periodicamente estes termos.
+            </p>
+
+            <h2>12. Lei Aplicável</h2>
+            <p>
+                Estes Termos de Serviço são regidos pelas leis do Brasil. Qualquer disputa relacionada a estes termos será resolvida nos tribunais competentes do Brasil.
+            </p>
+
+            <h2>13. Contato</h2>
+            <p>
+                Se você tiver dúvidas sobre estes Termos de Serviço, entre em contato conosco através do nosso site oficial ou pelo e-mail de suporte.
+            </p>
+
+            <a href="index.html" class="back-button">← Voltar para a Página Inicial</a>
+        </div>
+
+        <div class="footer-links">
+            <a href="terms.html" class="footer-link">
+                <span class="footer-link-icon">📜</span>
+                <span>Terms of Service</span>
+            </a>
+            <a href="privacy.html" class="footer-link" target="_blank" rel="noopener noreferrer">
+                <span class="footer-link-icon">🔒</span>
+                <span>Privacy Policy</span>
+            </a>
+            <a href="index.html" class="footer-link official-website">
+                <span class="footer-link-icon">🌐</span>
+                <span>Site Oficial</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
